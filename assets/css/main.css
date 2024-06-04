@@ -316,6 +316,15 @@ section {
     color: #000000;
   }
 
+  .downloadBtn2, 
+  .downloadBtn2:focus {
+    background: var(--color-primary);
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 4px;
+    color: #fff;
+  }
+
   .navbar .downloadBtn,
   .navbar .downloadBtn:focus {
     background: var(--color-primary);
@@ -323,6 +332,12 @@ section {
     margin-left: 30px;
     border-radius: 4px;
     color: #fff;
+  }
+
+  .downloadBtn2:hover,
+  .downloadBtn2:focus:hover {
+    color: #fff;
+    background: #2756ff;
   }
 
   .navbar .downloadBtn:hover,
@@ -333,7 +348,7 @@ section {
 }
 
 @media (min-width: 1280px) {
-
+  .downloadBtn2,
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -391,6 +406,15 @@ section {
     color: #fff;
   }
 
+  .downloadBtn2,
+  .downloadBtn2:focus {
+    background: var(--color-primary);
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin: 15px;
+    color: #fff;
+  }
+
   .navbar .downloadBtn,
   .navbar .downloadBtn:focus {
     background: var(--color-primary);
@@ -400,6 +424,12 @@ section {
     color: #fff;
   }
 
+  .downloadBtn2:hover,
+  .downloadBtn2:focus:hover {
+    color: #fff;
+    background: rgba(13, 66, 255, 0.8);
+  }
+
   .navbar .downloadBtn:hover,
   .navbar .downloadBtn:focus:hover {
     color: #fff;
@@ -407,7 +437,7 @@ section {
   }
 
   .mobile-nav-show {
-    color: #fff;
+    color: var(--color-primary);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
