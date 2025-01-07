@@ -11,6 +11,8 @@ import Sunset from "@/public/images/sunset.png";
 import Digital from "@/public/images/digitalMarketing.png";
 import ImageAsset from "@/public/images/imageAsset.png";
 import TestimonialsCarousel from "../testimony/page";
+import FeaturesCarousel from "../feature/page";
+import MobileTestimonialsCarousel from "../testimony/mobile/page";
 
 const HomePage = () => {
   const features = [
@@ -83,88 +85,97 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          
         </div>
-      </div>                
+      </div>
       {/* Features Section */}
-      <div className="flex justify-center mx-auto py-16 items-center flex-wrap mt-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 p-2">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="mb-16 bg-customCard h-auto w-auto sm:w-80 lg:w-80 text-xl font-medium text-gray-50 text-center rounded-2xl py-12 px-6"
-            >
-              {/* Image Wrapper */}
-              <div className="-mt-4 shadow-2xl bg-customGray h-60 w-80 lg:w-[255px] ml-1 lg:ml-2 rounded-xl transform -translate-y-24 flex items-center justify-center">
-                <Image
-                  src={feature.image} // Dynamically set image from the imported array
-                  alt={feature.title}
-                  width={1200} // Adjust width as needed
-                  height={1200} // Adjust height as needed
-                  className="h-52 w-[50rem]"
-                />
-              </div>
-              {/* Title */}
-              <h3 className="text-4xl font-semibold -mt-16">{feature.title}</h3>
-              {/* Description */}
-              <p className="text-gray-950 mt-2">{feature.description}</p>
+      <div className="py-16">
+        {/* Show FeaturesCarousel on small screens (sm) and below */}
+        <div className="block sm:hidden">
+          <FeaturesCarousel />
+        </div>
+
+        {/* Show grid layout on medium screens (sm and above) */}
+        <div className="hidden sm:block">
+          <div className="flex justify-center mx-auto items-center flex-wrap mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 p-2">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="mb-16 bg-customCard h-auto w-auto sm:w-80 lg:w-80 text-xl font-medium text-gray-50 text-center rounded-2xl py-12 px-6"
+                >
+                  {/* Image Wrapper */}
+                  <div className="-mt-4 shadow-2xl bg-customGray h-60 w-80 lg:w-[255px] ml-1 lg:ml-2 rounded-xl transform -translate-y-24 flex items-center justify-center">
+                    <Image
+                      src={feature.image} // Dynamically set image from the imported array
+                      alt={feature.title}
+                      width={1200} // Adjust width as needed
+                      height={1200} // Adjust height as needed
+                      className="h-52 w-[50rem]"
+                    />
+                  </div>
+                  {/* Title */}
+                  <h3 className="text-4xl font-semibold -mt-16">
+                    {feature.title}
+                  </h3>
+                  {/* Description */}
+                  <p className="text-gray-950 mt-2">{feature.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
       {/* Vision Section */}
       <div
-  className="py-32 sm:py-48 md:py-64 bg-cover bg-left relative mt-56"
-  style={{
-    backgroundImage: `url(${VisionBg.src})`, // Use imported image for background
-    backgroundPosition: "-5px center", // Center align the background image
-    backgroundSize: "80%", // Ensure the image scales to cover the container
-    backgroundRepeat: "no-repeat", // Prevent repeating the background image
-  }}
->
-<div className="absolute bottom-16 sm:bottom-24 md:bottom-64 left-4 sm:left-8 md:right-6 py-8 px-4">
-  <div className="ml-auto  sm:ml-12 md:ml-[200px] max-w-auto mb-48 xl:ml-[760px] xl:max-w-xl xl:mb-24">
-    {/* Title */}
-    <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 md:mb-8 text-customText text-left">
-      Vision
-    </h2>
-    {/* Description */}
-    <p className="text-base text-lg sm:text-lg md:text-xl font-medium text-gray-900 leading-relaxed text-left">
-      Transform last-mile mobility through a sustainable, efficient, and
-      inclusive transportation ecosystem that empowers millions of daily
-      commuters and fuels Bharat&apos;s economic growth.
-    </p>
-  </div>
-</div>
+        className="py-32 sm:py-48 md:py-64 bg-cover bg-left relative mt-56"
+        style={{
+          backgroundImage: `url(${VisionBg.src})`, // Use imported image for background
+          backgroundPosition: "-5px center", // Center align the background image
+          backgroundSize: "80%", // Ensure the image scales to cover the container
+          backgroundRepeat: "no-repeat", // Prevent repeating the background image
+        }}
+      >
+        <div className="absolute bottom-16 sm:bottom-24 md:bottom-64 left-4 sm:left-8 md:right-6 py-8 px-4">
+          <div className="ml-auto  sm:ml-12 md:ml-[200px] max-w-auto mb-48 xl:ml-[760px] xl:max-w-xl xl:mb-24">
+            {/* Title */}
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 md:mb-8 text-customText text-left">
+              Vision
+            </h2>
+            {/* Description */}
+            <p className="text-base text-lg sm:text-lg md:text-xl font-medium text-gray-900 leading-relaxed text-left">
+              Transform last-mile mobility through a sustainable, efficient, and
+              inclusive transportation ecosystem that empowers millions of daily
+              commuters and fuels Bharat&apos;s economic growth.
+            </p>
+          </div>
+        </div>
 
-  {/* Positioned Image */}
-  <div
-  className="absolute 
+        {/* Positioned Image */}
+        <div
+          className="absolute 
     left-20 bottom-36  // Default position for very small screens
     sm:left-16 sm:bottom-32 // Position for small screens
     md:left-[260px] md:bottom-[225px] // Position for medium screens
     lg:left-[300px] lg:bottom-[250px] // Position for large screens
     xl:left-[460px] xl:bottom-[378px] // Position for extra-large screens
     transform rotate-[7deg]"
->
-  <Image
-    src={ManWithFlag.src}
-    alt="Overlay"
-    width={2000}
-    height={1200}
-    className="
+        >
+          <Image
+            src={ManWithFlag.src}
+            alt="Overlay"
+            width={2000}
+            height={1200}
+            className="
       w-24 h-auto // Smaller image size for very small screens
       sm:w-48 // Slightly larger image for small screens
       md:w-52 // Medium-sized image for medium screens
       lg:w-52 // Larger image for large screens
       xl:w-52 // Full size for extra-large screens
     "
-  />
-</div>
-
-</div>
-
+          />
+        </div>
+      </div>
 
       {/* Stats Section */}
       <div className="bg-customBlue w-full px-4 mx-auto py-10 -mt-24">
@@ -252,7 +263,17 @@ const HomePage = () => {
       </div>
 
       {/* Testimonials Section */}
-      <TestimonialsCarousel />
+      <div className="py-16">
+  {/* Show TestimonialsCarousel on screens larger than 'sm' */}
+  <div className="hidden sm:block">
+    <TestimonialsCarousel />
+  </div>
+
+  {/* Show MobileTestimonialsCarousel on screens smaller than 'sm' */}
+  <div className="block sm:hidden">
+    <MobileTestimonialsCarousel />
+  </div>
+</div>
     </div>
   );
 };
