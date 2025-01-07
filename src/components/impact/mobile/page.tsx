@@ -5,6 +5,7 @@ import AboutSile from "@/public/images/aboutSlider.png";
 import Carbon from "@/public/images/aboutsliderco2.png";
 import RedAuto from "@/public/images/redauto.png";
 import Image from "next/image";
+import { useSwipeable } from "react-swipeable";
 
 const MobileImpactCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,9 +39,15 @@ const MobileImpactCarousel: React.FC = () => {
       (prevIndex) => (prevIndex - 1 + items.length) % items.length
     );
   };
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext, // Swipe left to go to the next slide
+    onSwipedRight: handlePrev, // Swipe right to go to the previous slide
+    preventScrollOnSwipe: true, // Prevent the page from scrolling while swiping
+    trackMouse: true, // Enable mouse dragging as well
+  });
 
   return (
-    <div className="bg-gray-200 py-32 overflow-hidden">
+    <div {...swipeHandlers} className="bg-gray-200 py-32 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <div className="relative">
           {/* Carousel content */}

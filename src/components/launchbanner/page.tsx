@@ -77,7 +77,7 @@ const AboutPageCarousel = () => {
   });
 
   return (
-    <div {...swipeHandlers} className={`py-40 ${launchData[currentIndex].backgroundColor}`}>
+    <div {...swipeHandlers} className={`py-40 ${launchData[currentIndex].backgroundColor} `}>
       <div
     className="absolute inset-0 z-0 hidden sm:block"
     style={{
@@ -96,9 +96,9 @@ const AboutPageCarousel = () => {
   <div
     className="absolute inset-0 z-0 block sm:hidden"
     style={{
-      transform: 'rotate(4deg)',
+      transform: 'rotate(0deg)',
       top: '30%', // Adjust the top position
-      left: '2%', // Adjust the left position
+      left: '1.5%', // Adjust the left position      
       width: '95%', // Control the image size
       height: '60%',
       backgroundImage: `url(${DottedLines.src})`, // Replace with the actual image path
