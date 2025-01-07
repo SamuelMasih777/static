@@ -5,6 +5,7 @@ import ImpactCarousel from "../impact/page";
 import Image from "next/image";
 import Environment from "@/public/images/environment.png";
 import Social from "@/public/images/csrimage.png";
+import MobileImpactCarousel from "../impact/mobile/page";
 
 const AboutPage = () => {
   return (
@@ -19,7 +20,17 @@ const AboutPage = () => {
       </div>
 
       {/* Impact Stats */}
-      <ImpactCarousel />
+      <div>
+      {/* MobileImpactCarousel for screens smaller than 'sm' */}
+      <div className="block sm:hidden">
+        <MobileImpactCarousel />
+      </div>
+
+      {/* ImpactCarousel for screens larger than or equal to 'sm' */}
+      <div className="hidden sm:block">
+        <ImpactCarousel />
+      </div>
+    </div>
 
       {/* Beyond Business Section */}
       <div className="overflow-hidden max-w-6xl mx-auto py-16 px-4">
