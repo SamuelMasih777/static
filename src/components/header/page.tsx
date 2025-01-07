@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import MyRik from "@/public/images/myrik.png";
 import { Menu } from "lucide-react";
-import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 
 export default function Header() {

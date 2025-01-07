@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import MyRikLogo from "@/public/images/logomyrik.png";
 import RiderLogo from "@/public/images/logorider.png";
