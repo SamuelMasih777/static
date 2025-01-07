@@ -11,13 +11,13 @@ const FeaturesCarousel = () => {
     {
       title: "MyRik",
       description:
-        "Ride Smart, Ride Green. Book rides with doorstep pickup for a convinient and affordable commute.",
+        "Ride Smart, Ride Green. Book rides with doorstep pickup for a convenient and affordable commute.",
       image: MyRikImage,
     },
     {
       title: "MyStore",
       description:
-        "Shop top products from partners, enjoy free delivery, and earn MyRik reward coins with every order.",
+        "Shop top products from MyRik Store, enjoy free delivery, and earn MyRik reward coins with every order.",
       image: MyStoreImage,
     },
     {
