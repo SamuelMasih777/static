@@ -8,7 +8,6 @@ import HomeEarth from "@/public/images/homesliderearth.png";
 import HomeAutoMen from "@/public/images/homeautoimage.png";
 import DottedLines from "@/public/images/dottedlines2.png"
 import { useSwipeable } from "react-swipeable";
-import DottedPreview from "@/public/images/preview1.png"
 
 const launchData = [
     {

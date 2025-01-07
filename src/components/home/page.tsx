@@ -47,8 +47,8 @@ const HomePage = () => {
               Commuters
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl  font-normal font-sans text-gray-500 p-2">
-              MyRik's proprietary multi-utilization platform and e-Rickshaw
-              drivers' exclusive network provides the complete suit of Apps
+              MyRik&apos;s proprietary multi-utilization platform and e-Rickshaw
+              drivers&apos; exclusive network provides the complete suit of Apps
               specifically built for भारत.
             </p>
           </div>
@@ -144,7 +144,7 @@ const HomePage = () => {
             </h2>
             {/* Description */}
             <p className="text-base text-lg sm:text-lg md:text-xl font-medium text-gray-900 leading-relaxed text-left">
-            Transform last-mile mobility through a sustainable, efficient, and inclusive transportation ecosystem that empowers millions of daily commuters and fuels Bharat's economic growth.
+            Transform last-mile mobility through a sustainable, efficient, and inclusive transportation ecosystem that empowers millions of daily commuters and fuels Bharat&apos;s economic growth.
             </p>
           </div>
         </div>

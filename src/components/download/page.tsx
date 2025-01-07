@@ -5,9 +5,7 @@ import RiderLogo from "@/public/images/logorider.png";
 import GooglePlay from "@/public/images/googleplay.png";
 import AndoridApp from "@/public/images/androidapp1.png";
 
-const DownloadPage = () => {
-  const [openCard, setOpenCard] = useState<string | null>(null);
-
+const DownloadPage = () => {  
   const apps = [
     {
       title: "MyRik Rider",
@@ -28,9 +26,7 @@ const DownloadPage = () => {
       appLink: "https://storage.googleapis.com/myrik-apks/DRIVER.apk",
     },
   ];
-
   
-
   return (
     <div className="min-h-screen bg-gray-50 py-36 px-4">
       <div className="mx-auto text-center">
