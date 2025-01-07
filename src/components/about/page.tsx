@@ -26,7 +26,7 @@ const AboutPage = () => {
         <h2 className="text-3xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl text-center font-bold text-customText mb-8">
           MyRik Beyond Business
         </h2>
-        <p className="leading-loose text-gray-800 text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl font-normal mb-12 m-8 w-full">
+        <p className="leading-loose text-gray-800 text-xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl font-normal mb-12 m-8 p-8 ml-2 w-full">
          We are building भारत stack for daily needs related to short distance riding
 and delivery. While this is being built to handle the mammoth scale that
 भारत presents, it will also be environment friendly and inclusive as it will

@@ -38,13 +38,13 @@ const HomePage = () => {
     <div className="min-h-screen bg-gray-50 overflow-hidden">
       {/* Hero Section */}
       <div className="bg-customGray py-14 px-12 relative">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between min-h-[90vh]">
-          <div className="w-2/3 lg:w-1/2 mt-8">
-            <h1 className="text-3xl sm:text-3xl md:text-5xl font-medium text-gray-800 font-sans mb-8 p-2">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between lg:min-h-[90vh]">
+          <div className="w-full sm:w-4/5 lg:w-1/2 mt-24 lg:mt-8 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-3xl md:text-5xl font-medium text-gray-800 font-sans mb-8">
               Last Mile Mobility Platform for Bharat&apos;s 180 Million Daily
               Commuters
             </h1>
-            <p className="text-xl sm:text-xl md:text-2xl  font-normal font-sans text-gray-500 p-2">
+            <p className="text-lg sm:text-xl md:text-2xl  font-normal font-sans text-gray-500 p-2">
               MyRik&apos;s proprietary multi-utilization platform and e-Rickshaw
               drivers exclusive network provides the complete suite of apps
               specifically built for भारत
@@ -83,18 +83,9 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="lg:hidden w-full mt-24">
-            <Image
-              src={RedAuto}
-              alt="Myrik Logo"
-              width={1200}
-              height={1200}
-              className="h-auto w-auto transform -scale-x-100 sm:w-full sm:h-auto"
-            />
-          </div>
+          
         </div>
-      </div>
-
+      </div>                
       {/* Features Section */}
       <div className="flex justify-center mx-auto py-16 items-center flex-wrap mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 p-2">

@@ -5,7 +5,7 @@ import MyRikLogo from "@/public/images/logomyrik.png";
 import DeliveryLogo from "@/public/images/logodelivery.png";
 import RiderLogo from "@/public/images/logorider.png";
 import GooglePlay from "@/public/images/googleplay.png";
-import AndoridApp from "@/public/images/androidapp.png"
+import AndoridApp from "@/public/images/androidapp1.png"
 
 const DownloadPage = () => {
   const [openCard, setOpenCard] = useState<string | null>(null);
@@ -65,11 +65,11 @@ const DownloadPage = () => {
             <div
               key={app.title}
               onClick={() => handleCardClick(app.title)}
-              className=" max-w-xl w-auto h-90 bg-customText rounded-2xl p-12 text-white transition-colors duration-200 cursor-pointer group"
+              className=" max-w-xl w-auto h-90 bg-customText rounded-2xl p-12 text-white transition-colors group"
             >              
 
               {/* Conditional rendering for toggled card content */}
-              {!openCard || openCard !== app.title ? (
+              {(
                 <div className="flex flex-col space-y-8">
                 {/* Image */}
                 <div className="flex items-start gap-8">
@@ -90,44 +90,37 @@ const DownloadPage = () => {
                     <h4 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-bold text-left">
                       {app.title}
                     </h4>
-                    <ArrowRight size={40} className="transform group-hover:translate-x-1 transition-transform duration-200" />
+                    {/* <ArrowRight size={40} className="transform group-hover:translate-x-1 transition-transform duration-200" /> */}
                   </div>
                   <p className="text-md sm:text-md md:text-md lg:text-lg xl:text-lg text-white/90">{app.description}</p>
                 </div>
-              </div>
-              ):(
-                <div className="-mt-2 bg-white h-60 rounded-xl p-6 text-black">
-          <h3 className="text-sm sm:text-xl md:text-xl lg:text-xl xl:text-xl font-semibold mb-2">Download the {app.title} now</h3>
-          <p className="text-sm sm:text-xl md:text-xl lg:text-xl xl:text-xl text-gray-950 font-medium mb-6 align-right">{app.detailedText}</p>
-          
-          <div className="flex items-center justify-center gap-4 -mt-8">
-  <button className="flex items-center justify-center text-white rounded-lg  transition duration-200 p-4" onClick={() =>
+                <div className="flex items-center justify-center gap-4 -mt-4 ">
+  <button className="flex items-center justify-center text-white rounded-lg  transition duration-200 p-2" onClick={() =>
     window.open(app.link, "_blank", "noopener noreferrer")
   }>
     
     <Image 
       src={GooglePlay} 
       alt="Google Play"
-      width={120} // Increased size
-      height={120} // Increased size
-      className="mr-2"
+      width={180} // Increased size
+      height={180} // Increased size
+      className="mr-2 rounded-lg w-96 sm:w-150 sm:h-150 md:w-180 md:h-180 lg:w-200 lg:h-200"
     />
     {/* <span>Get it on<br />Google Play</span> */}
   </button>
   
-  <button className="flex items-center justify-center text-white rounded-lg  transition duration-200 p-4">
+  <button className="flex items-center justify-center text-white rounded-lg  transition duration-200  p-2">
     <Image 
       src={AndoridApp}
       alt="Android"
-      width={120} // Increased size
-      height={120} // Increased size
-      className="mr-2"
+      width={180} // Increased size
+      height={180} // Increased size
+      className="mr-2 rounded-lg w-96 sm:w-150 sm:h-150 md:w-180 md:h-180 lg:w-200 lg:h-200"
     />
     {/* <span>Get it on<br />Android App</span> */}
   </button>
 </div>
-
-        </div>
+              </div>
               )}
             </div>
           ))}

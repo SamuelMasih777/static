@@ -30,8 +30,8 @@ export default function Header() {
         {/* Main nav container */}
         <div className="h-16 flex items-center justify-between">
           {/* Logo container */}
-          <div className="flex items-center">
-            <Link href="/home" className="flex items-center">
+          <div className="flex items-center -ml-4 md:ml-0 md:mr-0">
+            <Link href="/home" className="flex items-center" onClick={handleLinkClick}>
               <Image
                 src={MyRik}
                 alt="Myrik Logo"

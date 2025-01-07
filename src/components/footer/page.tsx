@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaYoutube } from "react-icons/fa";
 import React from "react";
 
 export default function Footer() {
@@ -51,15 +51,11 @@ export default function Footer() {
                 help@myrik.in
               </Link>
             </p>
-            <div className="flex justify-center md:justify-start space-x-4 mt-8">
-              <Link href="/" className="text-gray-900">
-                <FaFacebook size={36} />
-              </Link>
-              <Link href="/" className="text-gray-900">
-                <FaInstagram size={36} />
-              </Link>
-              <Link href="/" className="text-gray-900">
-                <FaTwitter size={36} />
+            <div className="flex justify-center md:justify-start space-x-4 mt-8">              
+              <Link href="https://www.youtube.com/@MyRik-fi2rr" className="text-gray-900"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaYoutube size={36} />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/myrik"
