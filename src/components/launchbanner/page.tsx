@@ -23,7 +23,7 @@ const launchData = [
     },
     {
       image: MoneyImage,
-      text: "30,000 Montly Users Milestone - September 2024",
+      text: "30,000 Monthly Users Milestone - September 2024",
       description:
         "By September 2024, MyRik proudly achieved a significant milestone by reaching 30,000 Monthly Active Users, reflecting the platform's growing popularity and the trust of our expanding community.",
       backgroundColor: "bg-customBlueBg",
