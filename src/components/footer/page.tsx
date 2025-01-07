@@ -18,7 +18,7 @@ export default function Footer() {
             </h3>
             <p className="mt-2 text-xl font-medium">
               Arohana Technologies Private Limited <br />
-              401 Bldg No B1, Boomerang, Equity Bussipark Cts No 4, <br />
+              401 Bldg No B1, Boomerang Equity Bussipark, Cts No 4, <br />
               Mumbai-400072, Maharashtra, India
             </p>
           </div>

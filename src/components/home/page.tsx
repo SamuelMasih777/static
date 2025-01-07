@@ -19,13 +19,13 @@ const HomePage = () => {
     {
       title: "MyRik",
       description:
-        "Ride Smart, Ride Green. Book rides with doorstep pickup for a convinient and affordable commute.",
+        "Ride Smart, Ride Green. Book rides with doorstep pickup for a convenient and affordable commute.",
       image: MyRikImage,
     },
     {
       title: "MyStore",
       description:
-        "Shop top products from partners, enjoy free delivery, and earn MyRik reward coins with every order.",
+        "Shop top products from our store, enjoy free delivery, and earn MyRik travel coins with every order.",
       image: MyStoreImage,
     },
     {
@@ -47,9 +47,9 @@ const HomePage = () => {
               Commuters
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl  font-normal font-sans text-gray-500 p-2">
-              MyRik&apos;s proprietary multi-utilization platform and e-Rickshaw
-              drivers exclusive network provides the complete suite of apps
-              specifically built for भारत
+              MyRik's proprietary multi-utilization platform and e-Rickshaw
+              drivers' exclusive network provides the complete suit of Apps
+              specifically built for भारत.
             </p>
           </div>
           <div className="w-1/3 lg:w-1/2">
@@ -144,9 +144,7 @@ const HomePage = () => {
             </h2>
             {/* Description */}
             <p className="text-base text-lg sm:text-lg md:text-xl font-medium text-gray-900 leading-relaxed text-left">
-              Transform last-mile mobility through a sustainable, efficient, and
-              inclusive transportation ecosystem that empowers millions of daily
-              commuters and fuels Bharat&apos;s economic growth.
+            Transform last-mile mobility through a sustainable, efficient, and inclusive transportation ecosystem that empowers millions of daily commuters and fuels Bharat's economic growth.
             </p>
           </div>
         </div>
@@ -204,7 +202,7 @@ const HomePage = () => {
             <div className="bg-customRed rounded-xl p-6 shadow-lg flex flex-col h-[10rem]">
               <h3 className="text-3xl font-semibold mb-4 text-white">Trips</h3>
               <p className="text-xl text-white">
-                <strong>200,000+</strong> Successful Trips and Growing
+                <strong>200,000+</strong> Successful Trips and Growing!
               </p>
             </div>
 
@@ -214,7 +212,7 @@ const HomePage = () => {
                 Passengers
               </h3>
               <p className="text-xl text-white">
-                <strong>220,000+</strong> Passengers Served with Pride
+                <strong>220,000+</strong> Passengers Served with Pride!
               </p>
               <div className="relative w-80 h-80 top-2 right-8 mt-auto">
                 <Image
@@ -234,7 +232,7 @@ const HomePage = () => {
               Kilometers
             </h3>
             <p className="text-xl text-white">
-              <strong>450,000+</strong> Kilometers Covered with Excellence
+              <strong>450,000+</strong> Kilometers Covered with Excellence!
             </p>
             <div className="absolute w-96 h-96 top-32 -bottom-10 left-2  mt-auto">
               <Image
@@ -264,16 +262,16 @@ const HomePage = () => {
 
       {/* Testimonials Section */}
       <div className="py-16">
-  {/* Show TestimonialsCarousel on screens larger than 'sm' */}
-  <div className="hidden sm:block">
-    <TestimonialsCarousel />
-  </div>
+        {/* Show TestimonialsCarousel on screens larger than 'sm' */}
+        <div className="hidden sm:block">
+          <TestimonialsCarousel />
+        </div>
 
-  {/* Show MobileTestimonialsCarousel on screens smaller than 'sm' */}
-  <div className="block sm:hidden">
-    <MobileTestimonialsCarousel />
-  </div>
-</div>
+        {/* Show MobileTestimonialsCarousel on screens smaller than 'sm' */}
+        <div className="block sm:hidden">
+          <MobileTestimonialsCarousel />
+        </div>
+      </div>
     </div>
   );
 };

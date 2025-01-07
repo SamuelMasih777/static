@@ -1,35 +1,55 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Good app and driver is also in very safe and good service. Use this app; the drivers provide excellent service.",
+    text: `"Good app and driver is also very polite and helpful because I said him please drop me at bus stand and he help me to catch the bus"`,
     author: "Archana Sidhu",
     rating: 5,
   },
   {
-    text: "Excellent service and great app experience! The drivers are professional, and the rides are always on time.",
-    author: "Rahul Sharma",
-    rating: 4,
-  },
-  {
-    text: "Affordable and reliable rides. The app is user-friendly and provides a seamless booking experience.",
-    author: "Priya Desai",
+    text: "Awesome 👍 Be leave me guys this app is wonderful This app you can provide the rickshaw in emergency 👍👍👍🥰",
+    author: "Pankaj Fitness",
     rating: 5,
   },
   {
-    text: "The ride booking experience is smooth, and the drivers are always courteous. Highly recommend this app.",
-    author: "Ankit Mehta",
+    text: `"Banda ke liye best hai"`,
+    author: "Manish Kumar",
     rating: 4,
   },
   {
-    text: "Efficient service and clean vehicles. A very dependable option for daily commutes.",
-    author: "Sanjana Roy",
+    text: `"Very good app satisfied payment rate and concept this app service But launch all India or up and please add pickup location dalne ka option this app work only local Banda city"`,
+    author: "Pankaj Goswami",
     rating: 5,
   },
   {
-    text: "User-friendly app and great customer support. My go-to app for hassle-free rides.",
-    author: "Vikas Patel",
+    text: "Nice app",
+    author: "Parul Dass",
+    rating: 4,
+  },
+  {
+    text: "It's a good and very useful app l were happy with this but one more thing on that one If add are soo.much then we will get extra more coins it's a good app I request all of you download this app thanks",
+    author: "Anju Sonkar",
+    rating: 4,
+  },
+  {
+    text: "Very good service and affordable for every person",
+    author: "Manoj Prajapati",
+    rating: 5,
+  },
+  {
+    text: "This is a helpful app, the concept is good, I think we should support this app",
+    author: "John D",
+    rating: 4,
+  },
+  {
+    text: "Only opinion its very good because i get best facility in my city which even ola and uber will not be able to provide this service thanks Myrik ☺️☺️🙏🏻🙏🏻🙏🏻",
+    author: "Abhishek Soni",
+    rating: 4,
+  },
+  {
+    text: "Good",
+    author: "Amit Kumar Rana",
     rating: 4,
   },
 ];
@@ -73,10 +93,10 @@ const TestimonialsCarousel = () => {
               >
                 <p className="text-gray-600 mb-4">&quot;{testimonial.text}&quot;</p>
                 <p className="text-xl font-semibold">{testimonial.author}</p>
-                <div className="flex justify-center mt-2">
+                <div className="flex justify-center mt-2 ">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <span key={i} className="text-yellow-400">
-                      ★
+                    <span key={i} >
+                      <Star size={20} className="text-yellow-400 fill-current"/>
                     </span>
                   ))}
                 </div>

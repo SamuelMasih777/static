@@ -4,10 +4,14 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import MyRik from "@/public/images/myrik.png";
 import { Menu } from "lucide-react";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+const isActive = (path:any) => pathname === path;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`z-50 fixed w-full ${
+      className={`z-50 fixed w-full transition-all duration-300 ease-in-out ${
         isScrolled ? "bg-white" : "bg-transparent"
       } hover:bg-white font-sans`}
     >
@@ -46,19 +50,33 @@ export default function Header() {
           <div className="hidden md:flex md:items-center md:gap-8">
             <Link
               href="/home"
-              className="px-6 py-2 font-medium border border-customText text-2xl text-customText rounded-xl"
+              className={`px-6 py-2 font-medium text-2xl rounded-xl ${
+                isActive("/home")
+                  ? "border border-customText text-customText"
+                  : "text-gray-900 hover:text-gray-700"
+              }`}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="px-6 py-2 text-gray-900 font-medium text-2xl hover:text-gray-700"
+              className={`px-6 py-2 font-medium text-2xl rounded-xl ${
+                isActive("/about")
+                  ? "border border-customText text-customText"
+                  : "text-gray-900 hover:text-gray-700"
+              }`}
+              
             >
               About
             </Link>
             <Link
               href="/download"
-              className="px-4 py-2 font-medium text-2xl bg-customText text-white rounded-lg hover:bg-customText"
+              // className="px-4 py-2 font-medium text-2xl  rounded-lg hover:bg-customText"
+              className={`px-6 py-2 font-medium text-2xl rounded-xl ${
+                isActive("/download")
+                  ? "bg-customText text-white"
+                  : "text-customText bg-white"
+              }`}
             >
               Download
             </Link>

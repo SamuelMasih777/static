@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useSwipeable } from "react-swipeable";
 import Image from "next/image";
 import MyRikImage from "@/public/images/rikshaw.png";
 import MyStoreImage from "@/public/images/image.png";
@@ -17,7 +18,7 @@ const FeaturesCarousel = () => {
     {
       title: "MyStore",
       description:
-        "Shop top products from MyRik Store, enjoy free delivery, and earn MyRik reward coins with every order.",
+        "Shop top products from our store, enjoy free delivery, and earn MyRik travel coins with every order.",
       image: MyStoreImage,
     },
     {
@@ -37,9 +38,16 @@ const FeaturesCarousel = () => {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === features.length - 1 ? 0 : prevIndex + 1));
   };
+  
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext, // Swipe left to go to the next slide
+    onSwipedRight: handlePrevious, // Swipe right to go to the previous slide
+    preventScrollOnSwipe: true, // Prevent the page from scrolling while swiping
+    trackMouse: true, // Enable mouse dragging as well
+  });
 
   return (
-    <div className="relative flex flex-col items-center py-24 px-12">
+    <div {...swipeHandlers} className="relative flex flex-col items-center py-24 px-12">
       {/* Carousel Wrapper - removed overflow-hidden from this div */}
       <div className="relative w-80 max-w-lg">
         {/* Cards Container - keep overflow-hidden here */}

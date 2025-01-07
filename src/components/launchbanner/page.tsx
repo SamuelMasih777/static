@@ -6,13 +6,16 @@ import MoneyImage from "@/public/images/homeslider.png";
 import HomeAuto from "@/public/images/homesilderauto.png";
 import HomeEarth from "@/public/images/homesliderearth.png";
 import HomeAutoMen from "@/public/images/homeautoimage.png";
+import DottedLines from "@/public/images/dottedlines2.png"
+import { useSwipeable } from "react-swipeable";
+import DottedPreview from "@/public/images/preview1.png"
 
 const launchData = [
     {
       image: HomeAutoMen,
-      text: "MyRik Launches in Banda - May 2024",
+      text: "MyRik Launch - May 2024",
       description:
-        "MyRik was officially launched in Banda, Uttar Pradesh, in May 2024 with the mission to revolutionize urban trsnportation by providing eco-friendly and affordable e-rickshaw services.",
+        "MyRik was officially launched in Banda, Uttar Pradesh, in May 2024 with the mission to revolutionize urban transportation by providing eco-friendly and affordable e-rickshaw services.",
       backgroundColor: "bg-customPinkBg",
       circleColor: "bg-customCircularPurple",
       imageStyles: { top: "-2rem", left: "-1.9rem" }, // Custom styles for this image
@@ -21,9 +24,9 @@ const launchData = [
     },
     {
       image: MoneyImage,
-      text: "30,000 Montly Users Milestone-September 2024",
+      text: "30,000 Montly Users Milestone - September 2024",
       description:
-        "By September 2024, MyRik proudly achieved a significant milestone, reaching 30,000 Montly Active Users, reflecting the platform's growing popularity and the trust of our expanding community.",
+        "By September 2024, MyRik proudly achieved a significant milestone by reaching 30,000 Monthly Active Users, reflecting the platform's growing popularity and the trust of our expanding community.",
       backgroundColor: "bg-customBlueBg",
       circleColor: "bg-customCircularViolet",
       imageStyles: { top: "-0.2rem", left: "-0.2rem" }, // Custom styles for this image
@@ -32,7 +35,7 @@ const launchData = [
     },
     {
       image: HomeAuto,
-      text: "MyRik collaborates with local retailers - July 2024",
+      text: "200,000 Rides Achieved - November 2024",
       description:
         "In November 2024, MyRik celebrated a major achievement of completing 200,000 rides, a testament to our commitment to seamless and reliable transportation for our users.",
       backgroundColor: "bg-customYellowBg",
@@ -43,9 +46,9 @@ const launchData = [
     },
     {
       image: HomeEarth,
-      text: "MyRik goes Green - August 2024",
+      text: "MyRik Launches in Kanpur - December 2024",
       description:
-        "In December 2024, MyRik successfully launched in Kanpur, marking the next step in our expansion journey to offer convinient and reliable transportation services to more users.",
+        "In December 2024, MyRik successfully launched its apps in Kanpur, marking the next step in our expansion journey to offer convenient and reliable transportation services to more users.",
       backgroundColor: "bg-customGreenBg",
       circleColor: "bg-customCircularIndigo",
       imageStyles: { top: "-6rem", left: "-0.1rem" }, // Custom styles for this image
@@ -67,9 +70,45 @@ const AboutPageCarousel = () => {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % launchData.length);
   };
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext, // Swipe left to go to the next slide
+    onSwipedRight: handlePrev, // Swipe right to go to the previous slide
+    preventScrollOnSwipe: true, // Prevent the page from scrolling while swiping
+    trackMouse: true, // Enable mouse dragging as well
+  });
 
   return (
-    <div className={`py-40 ${launchData[currentIndex].backgroundColor}`}>
+    <div {...swipeHandlers} className={`py-40 ${launchData[currentIndex].backgroundColor}`}>
+      <div
+    className="absolute inset-0 z-0 hidden sm:block"
+    style={{
+      transform: 'rotate(4deg)',
+      top: '22%', // Adjust the top position
+      left: '1%', // Adjust the left position
+      width: '100%', // Control the image size
+      height: '100%',
+      backgroundImage: `url(${DottedLines.src})`, // Replace with the actual image path
+      backgroundSize: '107% 65%', // Adjust to fit the container
+      backgroundPosition: 'center', // Center the image
+      backgroundRepeat: 'no-repeat', // Prevent image repetition
+      opacity: 0.5, // Optional: Adjust transparency
+    }}
+  ></div>
+  <div
+    className="absolute inset-0 z-0 block sm:hidden"
+    style={{
+      transform: 'rotate(4deg)',
+      top: '30%', // Adjust the top position
+      left: '2%', // Adjust the left position
+      width: '95%', // Control the image size
+      height: '60%',
+      backgroundImage: `url(${DottedLines.src})`, // Replace with the actual image path
+      backgroundSize: '150% 40%', // Adjust to fit the container
+      backgroundPosition: 'center', // Center the image
+      backgroundRepeat: 'no-repeat', // Prevent image repetition
+      opacity: 0.6, // Optional: Adjust transparency
+    }}
+  ></div>
   <div className="max-w-6xl mx-auto relative">
     {/* Navigation Buttons */}
     <ChevronLeft

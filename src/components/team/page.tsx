@@ -76,14 +76,14 @@ const TeamSection = () => {
     {
       name: "Yatish Gupta",
       title: "Co-Founder & CPO",
-      education: "B.Tech, M.Tech @ IIT Bombay 0'3",
+      education: "B.Tech, M.Tech @ IIT Bombay '03",
       image: Yatish,
       linkedinUrl: "https://www.linkedin.com/in/yatishgupta/", // Example LinkedIn URL
     },
     {
       name: "Mahesh Sharma",
       title: "Co-Founder & CTO",
-      education: "B.Tech @ IIT Bombay (2002-06)",
+      education: "B.Tech @ IIT Bombay (2006)",
       image: Mahesh,
       linkedinUrl: "https://www.linkedin.com/in/mahesh-sharma-a277766/", // Example LinkedIn URL
     },
