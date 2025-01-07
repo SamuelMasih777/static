@@ -107,10 +107,10 @@ const AboutPageCarousel = () => {
 
       {/* Text Section */}
       <div className="max-w-lg text-center p-12">
-        <h2 className="text-3xl font-semibold mb-4 text-customText ">
+        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl font-semibold mb-4 text-customText ">
           {launchData[currentIndex].text}
         </h2>
-        <p className="text-gray-900 text-xl font-medium leading-relaxed">
+        <p className="text-gray-900 text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl font-medium leading-relaxed">
           {launchData[currentIndex].description}
         </p>
       </div>

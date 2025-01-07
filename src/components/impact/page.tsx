@@ -67,7 +67,7 @@ const ImpactCarousel: React.FC = () => {
                   </div>
                 )}
               </div>
-              <p className="text-3xl max-w-xl font-medium p-8 sm:text-center">
+              <p className="text-2xl ml-1 sm:text-2xl md:text-3xl lg:text-3xl xl:text-3xl max-w-xl font-medium p-8 text-center">
                 {items[currentIndex].text}
               </p>
             </div>

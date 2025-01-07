@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import MyRikLogo from "@/public/images/logomyrik.png";
 import DeliveryLogo from "@/public/images/logodelivery.png";

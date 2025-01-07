@@ -91,7 +91,7 @@ const TeamSection = () => {
 
   return (
     <div className="overflow-hidden max-w-7xl  mx-auto py-16">
-      <h2 className="text-5xl font-bold text-customText text-center mb-12">Meet Our Team</h2>
+      <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-customText text-center mb-12">Meet Our Team</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 place-items-center">
         {teamMembers.map((member, index) => (
           <TeamCard
@@ -105,7 +105,7 @@ const TeamSection = () => {
         ))}
       </div>
       <div className="text-center mt-24">
-        <h3 className="text-5xl font-bold text-customText">
+        <h3 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-customText">
           Driving Impact, Sustainability, Growth
         </h3>
       </div>
